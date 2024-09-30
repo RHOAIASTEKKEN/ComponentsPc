@@ -1,0 +1,246 @@
+.ensamble {
+    border-left: 5px solid red;
+    width: 500px;
+    height: 700px;
+    /* Establece una altura fija para la zona de ensamblaje */
+    position: relative;
+    /* Permite usar posicionamiento absoluto para los hijos */
+
+    p {
+        width: 100%;
+        color: rgb(0, 0, 0);
+        text-shadow: 6px 1px 0px rgba(255, 255, 255, 1);
+    }
+
+    div img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gabinete {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 10;
+        /* Posición inicial */
+        left: 0;
+        /* Posición inicial */
+    }
+
+    .tarjeta {
+        width: 300px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 115px;
+        /* Ajusta según sea necesario */
+        left: 30px;
+        /* Ajusta según sea necesario */
+    }
+
+    .procesador {
+        width: 70px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 180px;
+        /* Ajusta según sea necesario */
+        left: 150px;
+        /* Ajusta según sea necesario */
+    }
+
+    .disco {
+        width: 100px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 300px;
+        /* Ajusta según sea necesario */
+        left: 109px;
+        /* Ajusta según sea necesario */
+    }
+
+    .ram {
+        width: 150px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 210px;
+        /* Ajusta según sea necesario */
+        left: 185px;
+        /* Ajusta según sea necesario */
+        transform: rotate(90deg);
+        /* Rotea el elemento */
+    }
+
+    .culer {
+        width: 80px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 220px;
+        /* Ajusta según sea necesario */
+        left: 140px;
+        /* Ajusta según sea necesario */
+    }
+
+    .grafica {
+        width: 200px;
+        height: 60px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 335px;
+        /* Ajusta según sea necesario */
+        left: 30px;
+        /* Ajusta según sea necesario */
+        rotate: 180deg;
+
+        p {
+            rotate: 180deg;
+        }
+    }
+
+    .fuente {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        /* Permite la colocación precisa */
+        top: 420px;
+        /* Ajusta según sea necesario */
+        left: 30px;
+        /* Ajusta según sea necesario */
+    }
+}
+
+.partes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    gap: 10px;
+
+    div {
+        height: 230px;
+
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.todo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* Estilos globales */
+body {
+    background-color: #f0f0f0;
+    /* Fondo claro para contraste */
+    font-family: 'Arial', sans-serif;
+    /* Fuente más moderna */
+}
+
+/* Contenedor principal */
+.container {
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+    /* Fondo degradado */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    padding: 20px;
+    /* Espacio interno */
+}
+
+/* Título del ensamblador */
+h1 {
+    text-align: center;
+    /* Centrar el título */
+    color: #2c3e50;
+    /* Color del texto */
+    margin-bottom: 20px;
+    /* Espacio inferior */
+}
+
+/* Partes del PC */
+.partes {
+    padding: 10px;
+    /* Espacio interno */
+}
+
+.partes div {
+    background-color: #fff;
+    /* Fondo blanco para las partes */
+    border: 1px solid #ccc;
+    /* Borde suave */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    transition: transform 0.2s;
+    /* Animación al pasar el mouse */
+}
+
+/* Efecto hover en partes */
+.partes div:hover {
+    transform: scale(1.05);
+    /* Aumenta el tamaño ligeramente al pasar el mouse */
+}
+
+/* Zona de ensamblaje */
+.ensamble {
+    border-left: 5px solid #e74c3c;
+    /* Borde rojo para la zona de ensamblaje */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Estilos para el texto dentro de ensamble */
+.ensamble p {
+    text-align: center;
+    /* Centrar texto */
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo para el título de la zona de ensamblaje */
+.titleensamble {
+    font-size: 18px;
+    /* Tamaño de fuente más grande */
+    font-weight: bold;
+    /* Negrita */
+    color: #2c3e50;
+    /* Color del texto */
+    text-align: center;
+    /* Centrar texto */
+    margin-bottom: 10px;
+    /* Espacio inferior */
+}
+
+
+
+.Components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 15px;
+    place-items: center;
+
+    section {
+        width: 250px;
+        background: linear-gradient(to right, #ffffff, #e0e0e0);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        display: grid;
+        place-items: center;
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
